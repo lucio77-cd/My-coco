@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyCoco AI</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <h1>MyCoco AI</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Hidratação Hoje</h2>
+
+      <div class="water-buttons">
+        <button onclick="addWater(250)">+250ml</button>
+        <button onclick="addWater(500)">+500ml</button>
+      </div>
+
+      <p id="water-total">0 ml</p>
+    </section>
+
+    <section class="card">
+      <h2>Alimentação</h2>
+
+      <input type="text" id="food-input" placeholder="Ex: arroz, ovo, café">
+
+      <button onclick="saveFood()">
+        Salvar Refeição
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>Registro Biológico</h2>
+
+      <a href="capture.html" class="capture-btn">
+        Abrir Câmera
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>Últimos Eventos</h2>
+
+      <div id="event-list"></div>
+    </section>
+
+  </main>
+
+  <script src="js/db.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/hydration.js"></script>
+  <script src="js/food.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
